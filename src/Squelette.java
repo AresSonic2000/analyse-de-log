@@ -43,23 +43,28 @@ public class Squelette {
                 }
                 //Affichage
                 String nom = champs[5];
+                //Détecte si il y a un succès si "oui" il incrémente le compteur succès et mes à 0, le compteur echec
                 if(nom.equals("SUCCES")){
                     nb_succes++;
+                    //Affiche un message si il y a plus de 3 échec d'affiler détecter
                     if(cp_echec >= 3){
                         System.out.println("\n  "+cp_echec +"  echec a la suite detecter\n");
                         cp_echec = 0;
                     }
                     cp_echec = 0;
                 }
+                //Si il n'y a pas de succès détecter, il incrémente un compteur d'échec et fait augmenter le nombre d'échec
                 else{
                     nb_echec++;
                     cp_echec++;
+                    //Affiche les information sur la ligne où il y a u l'échec
                     System.out.println("IP source : " + champs[2] + "\nIP destination : " + champs[3] + "\nID : " + champs[4] + "\nACCES : " + champs[5]);
                     System.out.println("");
                     
                 }
     
             }
+            //Affiche le nombre de succès totale et le nombre d'échec
             System.out.println("Nombre de succes : "+ nb_succes);
             System.out.println("Nombre d'echec : "+ nb_echec);
             
