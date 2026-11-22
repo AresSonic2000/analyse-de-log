@@ -49,7 +49,7 @@ public class Squelette {
                     //Affiche un message si il y a plus de 3 échec d'affiler détecter
                     if(cp_echec >= 3){
                         System.out.println("\n  "+cp_echec +"  echec a la suite detecter\n");
-                        cp_echec = 0;
+                        
                     }
                     cp_echec = 0;
                 }
